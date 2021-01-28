@@ -1,3 +1,8 @@
+package com;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class RockMusic implements Music{
     public void doMyInit(){
         System.out.println("Doing my initialization");

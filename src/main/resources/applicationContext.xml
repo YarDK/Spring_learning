@@ -8,56 +8,5 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <!-- RockMusic musicBean = new RockMusic(); -->
-    <bean id="rockMusic"
-          class="RockMusic"
-          init-method="doMyInit"
-          destroy-method="doMyDestroy">
-    </bean>
-
-    <!--<bean id="classicMusic" class="ClassicalMusic"/>-->
-    <!--<bean id="jazzMusic" class="JazzMusic"/>-->
-
-
-    <!--
-    MusicPlayer musicPlayer = new MusicPlayer();
-    musicPlayer.setMusic(musicBean);
-
-    musicPlayer.setName("Some name");
-    musicPlayer.setVolume(50);
-    -->
-
-    <!--
-    scope - определяет сколько экземпляров класса может быть создано
-    По умолчанию singleton - метод getBean будет ссылаться всегда на один и тот же объект.
-    prototype - метод getBean будет ссылаться на разные объекты заданого класса.
-    -->
-
-    <!--
-    <bean id="musicPlayer"
-          class="MusicPlayer"
-          scope="prototype">
-        <property name="musicList">
-
-            // по сути у нас есть созданный лист, который пустой
-            // а тут мы говорим "Вот там есть лист, добавь в него вот это"
-            musicPlayer.setMusic(musicList);
-            musicList.add(rockMusic);
-            musicList.add(classicMusic);
-            musicList.add(jazzMusic);
-
-            <list>
-                <ref bean="rockMusic"/>
-                <ref bean="classicMusic"/>
-                <ref bean="jazzMusic"/>
-            </list>
-        </property>
-
-        <property name="name" value="${musicPlayer.name}" />
-        <property name="volume" value="${musicPlayer.volume}" />
-    </bean>
-    -->
-
+    <context:component-scan base-package="com"/>
 </beans>

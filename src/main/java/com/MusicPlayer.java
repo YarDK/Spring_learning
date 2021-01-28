@@ -1,8 +1,10 @@
+package com;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MusicPlayer {
-    //private Music music;
+    //private com.Music music;
     private List<Music> musicList = new ArrayList<>();
 
     private String name;
@@ -11,8 +13,7 @@ public class MusicPlayer {
     public MusicPlayer() {
     }
 
-    // invercion Control
-
+   // invercion Control
 
     public void setMusicList(List<Music> musicList) {
         this.musicList = musicList;
